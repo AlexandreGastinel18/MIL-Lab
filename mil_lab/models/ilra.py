@@ -2,7 +2,7 @@ import torch
 from transformers import PretrainedConfig, PreTrainedModel, AutoConfig, AutoModel
 import torch.nn as nn
 import torch.nn.functional as F
-from src.models.mil_template import MIL
+from mil_lab.models.mil_template import MIL
 
 
 """
@@ -184,10 +184,10 @@ class ILRA(MIL):
         return results_dict, log_dict
 
 class ILRAConfig(PretrainedConfig):
-    #_target_: str = "src.models.abmil.ABMIL"
+    #_target_: str = "mil_lab.models.abmil.ABMIL"
     model_type = 'ilra'
     def __init__(self,
-                _target_: str = "src.models.ilra.ILRAModel",
+                _target_: str = "mil_lab.models.ilra.ILRAModel",
                 embed_dim: int = 256,
                 in_dim: int = 1024,
                 num_classes: int = 2,

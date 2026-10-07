@@ -52,15 +52,15 @@ We provide the list of MIL model implementations available in MIL-Lab, adapted f
 
 | Model | Code | Paper | Model Class | Initialization |
 |:---|:---|:---|:---|:---|
-| ABMIL | [Link](./src/models/abmil.py) | [Link](https://arxiv.org/abs/1802.04712) | `ABMILModel()` | `create_model('abmil')`|
-| TransMIL | [Link](./src/models/transmil.py) | [Link](https://proceedings.neurips.cc/paper/2021/hash/10c272d06794d3e5785d5e7c5356e9ff-Abstract.html) | `TransMILModel()` | `create_model('transmil')`|
-| Transformer | [Link](./src/models/transformer.py) | [Link](https://arxiv.org/abs/1706.03762) | `TransformerModel()` |  `create_model('transformer')`|
-| WiKG | [Link](./src/models/wikg.py) | [Link](https://arxiv.org/abs/2403.07719) | `WIKGMILModel()` |  `create_model('wikg')`|
-| DFTD | [Link](./src/models/dftd.py) | [Link](https://openaccess.thecvf.com/content/CVPR2022/papers/Zhang_DTFD-MIL_Double-Tier_Feature_Distillation_Multiple_Instance_Learning_for_Histopathology_Whole_CVPR_2022_paper.pdf) | `DFTDModel()` |  `create_model('dftd')`|
-| DSMIL| [Link](./src/models/dsmil.py) | [Link](https://arxiv.org/abs/2011.08939) | `DSMILModel()` |  `create_model('dsmil')`|
-| ILRA | [Link](./src/models/ilra.py) | [Link](https://openreview.net/pdf?id=01KmhBsEPFO) | `ILRAModel()`|  `create_model('ilra')`|
-| RRT | [Link](./src/models/rrt.py) | [Link](https://arxiv.org/abs/2402.17228) | `RRTMILModel()`|  `create_model('rrt')`|
-| CLAM | [Link](./src/models/clam.py) | [Link](https://www.nature.com/articles/s41551-020-00682-w) | `CLAMModel()` |  `create_model('clam')`|
+| ABMIL | [Link](./mil_lab/models/abmil.py) | [Link](https://arxiv.org/abs/1802.04712) | `ABMILModel()` | `create_model('abmil')`|
+| TransMIL | [Link](./mil_lab/models/transmil.py) | [Link](https://proceedings.neurips.cc/paper/2021/hash/10c272d06794d3e5785d5e7c5356e9ff-Abstract.html) | `TransMILModel()` | `create_model('transmil')`|
+| Transformer | [Link](./mil_lab/models/transformer.py) | [Link](https://arxiv.org/abs/1706.03762) | `TransformerModel()` |  `create_model('transformer')`|
+| WiKG | [Link](./mil_lab/models/wikg.py) | [Link](https://arxiv.org/abs/2403.07719) | `WIKGMILModel()` |  `create_model('wikg')`|
+| DFTD | [Link](./mil_lab/models/dftd.py) | [Link](https://openaccess.thecvf.com/content/CVPR2022/papers/Zhang_DTFD-MIL_Double-Tier_Feature_Distillation_Multiple_Instance_Learning_for_Histopathology_Whole_CVPR_2022_paper.pdf) | `DFTDModel()` |  `create_model('dftd')`|
+| DSMIL| [Link](./mil_lab/models/dsmil.py) | [Link](https://arxiv.org/abs/2011.08939) | `DSMILModel()` |  `create_model('dsmil')`|
+| ILRA | [Link](./mil_lab/models/ilra.py) | [Link](https://openreview.net/pdf?id=01KmhBsEPFO) | `ILRAModel()`|  `create_model('ilra')`|
+| RRT | [Link](./mil_lab/models/rrt.py) | [Link](https://arxiv.org/abs/2402.17228) | `RRTMILModel()`|  `create_model('rrt')`|
+| CLAM | [Link](./mil_lab/models/clam.py) | [Link](https://www.nature.com/articles/s41551-020-00682-w) | `CLAMModel()` |  `create_model('clam')`|
 
  ---
 
@@ -81,9 +81,9 @@ Models are named as `<model_name>.<config>.<encoder>.<pretrain_task>`, with corr
 
 *Pretrained* models can be initialized either with a `state_dict` or with `AutoModel` 
 ```python
-from src.builder import create_model
+from mil_lab.builder import create_model
 
-# construct the model from src and load the state dict from HuggingFace
+# construct the model from mil_lab and load the state dict from HuggingFace
 create_model('abmil.base.uni.pc108-24k', num_classes=5)
 
 # or with HuggingFace's AutoModel using from_pretrained

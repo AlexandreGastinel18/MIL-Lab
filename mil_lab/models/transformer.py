@@ -1,9 +1,9 @@
-from src.models.mil_template import MIL
+from mil_lab.models.mil_template import MIL
 from transformers import PretrainedConfig, PreTrainedModel, AutoModel, AutoConfig
 
 import torch
 import torch.nn as nn
-from src.components import create_mlp
+from mil_lab.components import create_mlp
 
 
 class TransLayer(nn.Module):
@@ -180,7 +180,7 @@ class TransformerConfig(PretrainedConfig):
     model_type = 'transformer'
 
     def __init__(self,
-        #_target_: str = "src.models.transformer.TransformerModel",
+        #_target_: str = "mil_lab.models.transformer.TransformerModel",
         embed_dim: int = 512,
         num_fc_layers: int = 1,
         dropout: float = 0.25,

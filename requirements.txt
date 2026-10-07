@@ -1,6 +1,6 @@
 wandb
-transformers==4.53.1
-numpy<2
+transformers>=4.53.1
+numpy
 timm>=0.9.2
 torch>=2.0.0
 torchvision

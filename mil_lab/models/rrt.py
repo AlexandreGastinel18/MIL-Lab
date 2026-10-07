@@ -3,7 +3,7 @@ from dataclasses import dataclass
 import torch.nn.functional as F
 from torch import nn
 
-from src.models.mil_template import MIL
+from mil_lab.models.mil_template import MIL
 from transformers import PretrainedConfig
 from transformers import PreTrainedModel, AutoConfig, AutoModel
 
@@ -95,7 +95,7 @@ class SINCOS(nn.Module):
         out: (M, D)
         """
         assert embed_dim % 2 == 0
-        omega = np.arange(embed_dim // 2, dtype=np.float)
+        omega = np.arange(embed_dim // 2, dtype=np.float64)
         omega /= embed_dim / 2.
         omega = 1. / 10000 ** omega  # (D/2,)
 
@@ -422,7 +422,7 @@ def get_act(act):
 
 
 import torch.nn as nn
-from src.components.nystrom_attention import NystromAttention
+from mil_lab.components.nystrom_attention import NystromAttention
 
 
 # --------------------------------------------------------

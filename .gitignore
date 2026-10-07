@@ -10,7 +10,7 @@ __pycache__
 .ipynb_checkpoints
 .vscode
 **/wandb
-src/notebooks/symlink_dataset.ipynb
+mil_lab/notebooks/symlink_dataset.ipynb
 *private*
 *outputs*
 *.safetensors
@@ -161,8 +161,8 @@ gpu1sync.sh
 **/._*
 **/*DS_*
 **.jsonl
-src/sbatch
-src/misc
+mil_lab/sbatch
+mil_lab/misc
 .vscode
-src/debug
+mil_lab/debug
 core.*
