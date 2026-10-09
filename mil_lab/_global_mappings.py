@@ -6,7 +6,7 @@ CONFIG_PATH = os.path.join(REPO_PATH, 'model_configs')
 MODEL_SAVE_PATH = os.path.join(REPO_PATH, 'model_weights')
 
 ENCODER_DIM_MAPPING : dict[str, int] = {
-    'uni': 1024,
+    'uni_v1': 1024,
     'uni_v2': 1536,
     'ctranspath': 768,
     'conch_v1': 512,
